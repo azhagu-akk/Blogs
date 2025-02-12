@@ -116,7 +116,7 @@ const EditPost = () => {
             </div>
           </div>
           <textarea onChange={(e)=>setDesc(e.target.value)} value={desc} rows={15} cols={30} className='px-4 py-2 outline-none' placeholder='Enter post description'/>
-          <button onClick={handleUpdate} className='mb-8 bg-black w-full md:w-[20%] mx-auto text-white font-semibold px-4 py-2 md:text-xl text-lg'>Update</button>
+          <button onClick={handleUpdate} className='mb-8 bg-black w-full md:w-[20%] mx-auto text-white font-semibold px-4 py-2 md:text-xl text-lg cursor-pointer'>Update</button>
         </form>
 
         </div>
