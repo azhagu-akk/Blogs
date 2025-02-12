@@ -29,14 +29,13 @@ const connectDB=async()=>{
 dotenv.config()
 app.use(express.json())
 app.use("/images",express.static(path.join(__dirname,"/images")))
-// app.use(cors({ origin: "https://blogify5.netlify.app", credentials: true }));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://blogify5.netlify.app");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.header("Access-Control-Allow-Credentials", "true"); // Allow credentials
-  next();
-});
+app.use(cors({ origin: "https://blogify5.netlify.app", credentials: true }));
+// app.use(cors({ origin: "http://localhost:5174", credentials: true }));
+
+
+
+
+
 
 app.use(cookieParser())
 app.use("/api/auth",authRoute)
